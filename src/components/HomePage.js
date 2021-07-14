@@ -97,7 +97,7 @@ export default function HomePage(props) {
               strings={[
                 'I am a fullstack developer',
                 'I can teach you how to snowboard',
-                'I can try to do a backflip']}
+                ]}
               typeSpeed={40}
               backSpeed={50}
             >
@@ -110,7 +110,7 @@ export default function HomePage(props) {
           --------------------------------------------------*/}
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <Typography color='primary' variant="h4" align="center" className={classes.sectionTitles} >The portfolio</Typography>
+          <Typography color='primary' variant="h4" align="center" className={classes.sectionTitles}>Development experience</Typography>
         </Grid>
 
         <Grid item xs={12} sm={6}>
@@ -177,7 +177,7 @@ export default function HomePage(props) {
                   Nomad Skater
                 </Typography>
                 <Typography variant="body1" component="p" paragraph>
-                  Nomad Skater is a game about a skateboarder that earns money from tricks while travelling. The player has to navigate through obstacles to get money and avoid the police officers who think that 'skateboarding is a crime'.
+                  Nomad Skater is a game about a skateboarder that earns money from tricks while travelling. The player has to navigate through obstacles to get money and avoid the police officers who think that 'skateboarding is a crime'. The speed increases everytime the player scores another 15 points.
                 </Typography>
                 <Typography gutterBottom variant="h6" component="h2" align="center">
                   Used technologies

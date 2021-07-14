@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(6),
   },
   logoDesktop: {
-    maxWidth: 50,
+    maxWidth: 150,
   },
   color: {
     backgroundColor: "#2D2D2D"
@@ -61,7 +61,7 @@ const MenuAppBar = props => {
       <AppBar position="fixed" className={classes.color} >
         <Toolbar>
           <Typography className={classes.title}>
-           <Typography className={classes.logoDesktop} >Sasiamba</Typography>
+           <Typography className={classes.logoDesktop} >Daniel's porfolio</Typography>
           </Typography>
           {
             isMobile ? (
