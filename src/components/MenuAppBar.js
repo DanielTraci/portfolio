@@ -5,39 +5,47 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Button from '@material-ui/core/Button';
 import clsx from 'clsx'
+import logo from "./logo.png"
+import {Link as RouterLink } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   menuButton: {
-    marginRight: theme.spacing(2),
+    margin: theme.spacing(1),
   },
-  margin: {
-    marginRight: theme.spacing(2),
+  btnsMobile: {
+    margin: theme.spacing(0, 1, 0, 1),
+    width: "120px",
+    '&:hover': {
+      backgroundColor: "#0053e1",
+    },
+  },
+  btnsDesktop: {
+    margin: theme.spacing(0, 1, 0, 1),
+    width: "120px",
   },
   title: {
     flexGrow: 1,
-    marginLeft: theme.spacing(10)
+
   },
   navBarFlex: {
     display: "flex",
     flex: 1,
     justifyContent: "space-around",
-    marginRight: theme.spacing(6),
-  },
-  logoDesktop: {
-    maxWidth: 150,
+    marginRight: theme.spacing(4),
   },
   color: {
     backgroundColor: "#1d1d1d"
   },
+  logoDesktop: {
+    maxWidth: 50,
+  },
 }));
 
 const MenuAppBar = props => {
-  const { history } = props;
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -48,21 +56,12 @@ const MenuAppBar = props => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleMenuClick = (pageURL) => {
-    history.push(pageURL)
-    setAnchorEl(null);
-  };
-
-  const handleButtonClick = pageURL => {
-    history.push(pageURL);
-  };
-
   return (
     <div>
       <AppBar position="fixed" className={classes.color} >
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            Daniel's porfolio
+          <Typography className={classes.title}>
+            <RouterLink className="csiLogo"><img src={logo} alt="csilinuxlogo" className={classes.logoDesktop} /></RouterLink>
           </Typography>
           {
             isMobile ? (
@@ -86,19 +85,16 @@ const MenuAppBar = props => {
                   open={open}
                   onClose={() => setAnchorEl(null)}
                 >
-                  {/*                   <MenuItem onClick={() => handleMenuClick('#about')}>ABOUT ME</MenuItem>
-                  <MenuItem onClick={() => handleMenuClick('/tutorials')}>PROJECTS</MenuItem>
-                  <MenuItem onClick={() => handleMenuClick('/tutorials')}>CONTACT ME</MenuItem> */}
-                  <Button size="large" className={clsx("navBarPublicationsLink", classes.margin)} href="#about">About me</Button>
-                  <Button size="large" className={clsx("navBarPublicationsLink", classes.margin)} href="#projects">Projects</Button>
-                  <Button size="large" className={clsx("navBarPublicationsLink", classes.margin)} href="#contact"> Contact me</Button>
+                  <Button size="large" className={clsx("navBarPublicationsLink", classes.btnsMobile)} href="#about">About me</Button>
+                  <Button size="large" className={clsx("navBarPublicationsLink", classes.btnsMobile)} href="#projects">Projects</Button>
+                  <Button size="large" className={clsx("navBarPublicationsLink", classes.btnsMobile)} href="#contact"> Contact me</Button>
                 </Menu>
               </>
             ) : (
               <div className={classes.navBarFlex}>
-                <Button size="large" color="secondary" className={clsx("navBarPublicationsLink", classes.margin)} href="#about">About me</Button>
-                <Button size="large" color="secondary" className={clsx("navBarPublicationsLink", classes.margin)} href="#projects">Projects</Button>
-                <Button size="large" color="secondary" className={clsx("navBarPublicationsLink", classes.margin)} href="#contact"> Contact me</Button>
+                <Button size="large" color="secondary" className={clsx("navBarPublicationsLink", classes.btnsDesktop)} href="#about">About me</Button>
+                <Button size="large" color="secondary" className={clsx("navBarPublicationsLink", classes.btnsDesktop)} href="#projects">Projects</Button>
+                <Button size="large" color="secondary" className={clsx("navBarPublicationsLink", classes.btnsDesktop)} href="#contact"> Contact me</Button>
               </div>
             )
           }

@@ -31,11 +31,11 @@ const theme = createMuiTheme({
 
   typography: {
     h3: {
-      fontSize: '2.45rem',
+      fontSize: '1.9rem',
       '@media (min-width:600px)': {
         fontSize: '3.7rem',
       },
-    }
+    },
 
   }
 
