@@ -20,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
-    marginLeft: theme.spacing(10)
   },
   navBarFlex: {
     display: "flex",
@@ -32,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 150,
   },
   color: {
-    backgroundColor: "#1d1d1d"
+    backgroundColor: "#2D2D2D"
   },
 }));
 
@@ -61,17 +60,17 @@ const MenuAppBar = props => {
     <div>
       <AppBar position="fixed" className={classes.color} >
         <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            Daniel's porfolio
+          <Typography className={classes.title}>
+           <Typography className={classes.logoDesktop} >Daniel's porfolio</Typography>
           </Typography>
           {
             isMobile ? (
               <>
                 <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu"
                   onClick={handleMenu}>
-                  <MenuIcon color="secondary" />
+                  <MenuIcon color="primary"/>
                 </IconButton>
-                <Menu
+                <Menu 
                   id="menu-appbar"
                   anchorEl={anchorEl}
                   anchorOrigin={{
@@ -86,18 +85,15 @@ const MenuAppBar = props => {
                   open={open}
                   onClose={() => setAnchorEl(null)}
                 >
-                  {/*                   <MenuItem onClick={() => handleMenuClick('#about')}>ABOUT ME</MenuItem>
-                  <MenuItem onClick={() => handleMenuClick('/tutorials')}>PROJECTS</MenuItem>
-                  <MenuItem onClick={() => handleMenuClick('/tutorials')}>CONTACT ME</MenuItem> */}
-                  <Button size="large" className={clsx("navBarPublicationsLink", classes.margin)} href="#about">About me</Button>
-                  <Button size="large" className={clsx("navBarPublicationsLink", classes.margin)} href="#projects">Projects</Button>
-                  <Button size="large" className={clsx("navBarPublicationsLink", classes.margin)} href="#contact"> Contact me</Button>
+                  <MenuItem onClick={() => handleMenuClick('/download')}><Typography color="error">About me</Typography></MenuItem>
+                  <MenuItem onClick={() => handleMenuClick('/tutorials')}><Typography color="error">Experience</Typography></MenuItem>
+                <MenuItem onClick={() => handleMenuClick('/tutorials')}><Typography color="error">Experience</Typography></MenuItem>
                 </Menu>
               </>
             ) : (
               <div className={classes.navBarFlex}>
                 <Button size="large" color="secondary" className={clsx("navBarPublicationsLink", classes.margin)} href="#about">About me</Button>
-                <Button size="large" color="secondary" className={clsx("navBarPublicationsLink", classes.margin)} href="#projects">Projects</Button>
+                <Button size="large" color="secondary"  className={clsx("navBarPublicationsLink", classes.margin)} href="#projects">Experience</Button>
                 <Button size="large" color="secondary" className={clsx("navBarPublicationsLink", classes.margin)} href="#contact"> Contact me</Button>
               </div>
             )

@@ -1,15 +1,74 @@
-/* MOBILE - css applies if screen size is less than 768
+/* MOBILE - css applies if screen size is less than 900
 - .appMargins gets called in the App.js in render method
 */
-@media(max-width: 768px) {
+@media(max-width: 900px) {
   .appMargins {
     margin-left: 20px;
     margin-right: 20px;
   }
+  .h1FontSize {
+    font-size: 3rem;
+    display:inline-block;
+    background-color: #0053e1;
+    color: white;
+    padding: 5px 10px 5px 10px;
+  }
+  .h4FontSize {
+    font-size: 2.1rem;
+    display:inline-block;
+    background-color: #ff4617;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    margin-top: 10px;
+  }
+  .h5FontSize {
+    font-size: 1.5rem;
+    display:inline-block;
+    background-color: #ff4617;
+    color: white;
+    padding: 5px 10px 5px 10px; 
+    margin-top: 10px;
+  }
+  .cardProps {
+    width: 380px;
+  }
 }
 
-/* Desktop css applies if the screen size is greater than 768*/
-@media(min-width: 768px) {
+@media(max-width: 450px) {
+  .appMargins {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .h1FontSize {
+    font-size: 1.45rem;
+    display:inline-block;
+    background-color: #0053e1;
+    color: white;
+    padding: 5px 10px 5px 10px;
+  }
+  .h4FontSize {
+    font-size: 1.45rem;
+    display:inline-block;
+    background-color: #ff4617;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    margin-top: 10px;
+  }
+  .h5FontSize {
+    font-size: 1.45rem;
+    display:inline-block;
+    background-color: #ff4617;
+    color: white;
+    padding: 5px 10px 5px 10px; 
+    margin-top: 10px;
+  }
+  .cardProps {
+    width: 260px;
+  }
+}
+
+/* Desktop css applies if the screen size is greater than 900*/
+@media(min-width: 900px) {
   .appMargins {
     margin-left: 100px;
     margin-right: 100px;
@@ -17,7 +76,40 @@
   .csiLogo {
     margin-left: 77px;
   }
+  .h1FontSize {
+    font-size: 5rem;
+    display:inline-block;
+    background-color: #0053e1;
+    color: white;
+    padding: 5px 10px 5px 10px;
+  }
+  .h4FontSize {
+    font-size: 3.15rem;
+    display:inline-block;
+    background-color: #ff4617;
+    color: white;
+    padding: 5px 10px 5px 10px; 
+    margin-top: 10px;
+  }
+  .h5FontSize {
+    font-size: 2.2rem;
+    display:inline-block;
+    background-color: #ff4617;
+    color: white;
+    padding: 5px 10px 5px 10px; 
+    margin-top: 10px;
+  }
+  .cardProps {
+    width: 500px;
+  }
 }
+
+.bgTextColor {
+  display:inline-block;
+  background-color: #fef335;
+  padding: 5px 10px 5px 10px;  
+}
+
 
 .iconsXtext {
   display: flex;
@@ -26,9 +118,17 @@
   flex-wrap: wrap; 
 }
 
-a:hover { 
-  color: #0000ff;
+/* a:hover { 
+  color: #0053e1;
   text-decoration: none!important
+} */
+
+ul li{
+  float: left;
+  width: 50%;
+}
+ul{
+  list-style-type: disc;
 }
 
 /*special style for Publications link from the navigation bar*/
@@ -48,6 +148,7 @@ https://www.npmjs.com/package/react-player*/
   top: 0;
   left: 0;
 }
+
 
 /*scroll-bar design (on the right) */
 ::-webkit-scrollbar {

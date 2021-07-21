@@ -1,0 +1,38 @@
+[
+    {
+        "name": "MongoDB"
+    },
+    {
+        "name": "Express"
+    },
+    {
+        "name": "React"
+    },
+    {
+        "name": "Node"
+    },
+    {
+        "name": "HTML"
+    },
+    {
+        "name": "CSS"
+    },
+    {
+        "name": "Bootstrap"
+    },
+    {
+        "name": "Google Material-UI"
+    },
+    {
+        "name": "SASS"
+    },
+    {
+        "name": "APIs"
+    },
+    {
+        "name": "Mongoose"
+    },
+    {
+        "name": "Git"
+    }    
+]

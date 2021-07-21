@@ -15,16 +15,31 @@ const theme = createMuiTheme({
   //colors
   palette: {
     primary: {
-      main: "#1A1A1A"
+      //black
+      main: "#1d1d1d"
     },
+    
     secondary: {
+      //white
       main: "#F8F8F8"
     },
     error: {
-      //red
-      main: "#C01F24"
+      //blue
+      main: "#0053e1"
     },
   },
+
+  typography: {
+    h3: {
+      fontSize: '2.45rem',
+      '@media (min-width:600px)': {
+        fontSize: '3.7rem',
+      },
+    }
+
+  }
+
+
 
 
 });
