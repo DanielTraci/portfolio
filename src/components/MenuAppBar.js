@@ -10,7 +10,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Button from '@material-ui/core/Button';
 import clsx from 'clsx'
 import logo from "./logo.png"
-import {Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 import { useEffect } from 'react';
 
 const useStyles = makeStyles((theme) => ({
@@ -20,8 +20,10 @@ const useStyles = makeStyles((theme) => ({
   btnsMobile: {
     margin: theme.spacing(0, 1, 0, 1),
     width: "120px",
+    color: "#1d1d1d",
     '&:hover': {
-      backgroundColor: "#0053e1",
+      background: "none",
+      color: "#ff4617"
     },
     display: "flex"
   },
@@ -59,28 +61,28 @@ const MenuAppBar = props => {
     setAnchorEl(event.currentTarget);
   };
 
-/*   const handleMenuClick = (pageURL) => {
-    history.push(pageURL)
-    setAnchorEl(null);
-  };
- */
+  /*   const handleMenuClick = (pageURL) => {
+      history.push(pageURL)
+      setAnchorEl(null);
+    };
+   */
 
-/*   const handleLogoClick = pageURL => {
-    history.push(pageURL);
-  }; */
+  /*   const handleLogoClick = pageURL => {
+      history.push(pageURL);
+    }; */
 
   //onClick={() => handleLogoClick('/')}
-/* 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, []) */
+  /* 
+    useEffect(() => {
+      window.scrollTo(0, 0)
+    }, []) */
 
   return (
     <div>
       <AppBar position="fixed" className={classes.color} >
         <Toolbar>
           <Typography className={classes.title}>
-            <RouterLink className="csiLogo"  ><img src={logo}  alt="csilinuxlogo" className={classes.logoDesktop} /></RouterLink>
+            <RouterLink className="csiLogo"  ><img src={logo} alt="csilinuxlogo" className={classes.logoDesktop} /></RouterLink>
           </Typography>
           {
             isMobile ? (

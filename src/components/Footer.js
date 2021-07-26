@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(15)
   },
   icons: {
-    fontSize: "60px"
+    fontSize: "60px"    
   }
 }));
 

@@ -55,6 +55,13 @@ const useStyles = makeStyles((theme) => ({
     minWidth: "200px",
     maxWidth: "200px",
     margin: theme.spacing(3),
+    backgroundColor: "#0053e1",
+    color: "#FFFFFF",
+    '&:hover': {
+      backgroundColor: "#ff4617",
+      color: '#FFF'
+  }
+
   },
 
 }));
@@ -287,10 +294,10 @@ export default function HomePage(props) {
         </Typography>
       </Grid>
 
-      {/* <Button className={classes.btns} variant="outlined" color="primary" ><RouterLink id='linkCv' to='../DanielTraciResume.pdf' target="_blank" download><b>Download CV</b></RouterLink></Button> */}
+      {/* <Button className={classes.btns} variant="contained" color="primary" ><RouterLink id='linkCv' to='../DanielTraciResume.pdf' target="_blank" download><b>Download CV</b></RouterLink></Button> */}
 
       <Box display="flex" justifyContent="center">
-        <Button className={classes.btns} variant="outlined" color="primary" target="_blank" href="../DanielTraciResume.pdf" download>Download my resume</Button>
+        <Button className={classes.btns} variant="contained" color="primary" target="_blank" href="../DanielTraciResume.pdf" download>Download my resume</Button>
       </Box>
 
       {/* Projects---------------------
@@ -333,7 +340,7 @@ export default function HomePage(props) {
             direction="row"
             justify="center"
             alignItems="center">
-            <Button className={classes.btns} variant="outlined" color="primary" href="https://csilinux.com/">Visit CSI Linux</Button>
+            <Button className={classes.btns} variant="contained" color="primary" href="https://csilinux.com/">Visit CSI Linux</Button>
           </Grid>
         </Grid>
       </Grid>
@@ -372,7 +379,7 @@ export default function HomePage(props) {
                   direction="row"
                   justify="center"
                   alignItems="center">
-                  <Button variant="outlined" className={classes.btns} color="primary" onClick={handleClickOpen}>
+                  <Button variant="contained" className={classes.btns} color="primary" onClick={handleClickOpen}>
                     Watch Demo
                   </Button>
                 </Grid>
@@ -443,7 +450,7 @@ export default function HomePage(props) {
                   direction="row"
                   justify="center"
                   alignItems="center">
-                  <Button className={classes.btns} variant="outlined" color="primary" href="https://newpeaks.herokuapp.com/">Visit newpeaks</Button>
+                  <Button className={classes.btns} variant="contained" color="primary" href="https://newpeaks.herokuapp.com/">Visit newpeaks</Button>
                 </Grid>
               </CardContent>
             </CardActionArea>
@@ -477,7 +484,7 @@ export default function HomePage(props) {
                   direction="row"
                   justify="center"
                   alignItems="center">
-                  <Button className={classes.btns} variant="outlined" color="primary" href="https://danieltraci.github.io/Nomad-Skater/">Play Nomad Skater</Button>
+                  <Button className={classes.btns} variant="contained" color="primary" href="https://danieltraci.github.io/Nomad-Skater/">Play Nomad Skater</Button>
                 </Grid>
               </CardContent>
             </CardActionArea>
