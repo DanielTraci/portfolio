@@ -11,6 +11,7 @@ import Button from '@material-ui/core/Button';
 import clsx from 'clsx'
 import logo from "./logo.png"
 import {Link as RouterLink } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const useStyles = makeStyles((theme) => ({
   menuButton: {
@@ -22,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       backgroundColor: "#0053e1",
     },
+    display: "flex"
   },
   btnsDesktop: {
     margin: theme.spacing(0, 1, 0, 1),
@@ -51,17 +53,34 @@ const MenuAppBar = props => {
   const open = Boolean(anchorEl);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
+  const { history } = props
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
+/*   const handleMenuClick = (pageURL) => {
+    history.push(pageURL)
+    setAnchorEl(null);
+  };
+ */
+
+/*   const handleLogoClick = pageURL => {
+    history.push(pageURL);
+  }; */
+
+  //onClick={() => handleLogoClick('/')}
+/* 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, []) */
 
   return (
     <div>
       <AppBar position="fixed" className={classes.color} >
         <Toolbar>
           <Typography className={classes.title}>
-            <RouterLink className="csiLogo"><img src={logo} alt="csilinuxlogo" className={classes.logoDesktop} /></RouterLink>
+            <RouterLink className="csiLogo"  ><img src={logo}  alt="csilinuxlogo" className={classes.logoDesktop} /></RouterLink>
           </Typography>
           {
             isMobile ? (

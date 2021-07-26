@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
@@ -22,6 +23,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import Slide from '@material-ui/core/Slide';
 import Link from '@material-ui/core/Link';
+import { Link as RouterLink } from 'react-router-dom';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -50,7 +52,8 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(15),
   },
   btns: {
-    width: "200px",
+    minWidth: "200px",
+    maxWidth: "200px",
     margin: theme.spacing(3),
   },
 
@@ -68,6 +71,10 @@ export default function HomePage(props) {
   const handleClose = () => {
     setOpen(false);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div>
@@ -275,10 +282,16 @@ export default function HomePage(props) {
       </Grid>
 
       <Grid item xs={12}>
-        <Typography variant="h6" color="primary" align="center" >
+        <Typography variant="h6" color="primary" align="center" paragraph>
           My professional <span className="highlight">background</span> is a good add to my skills. I hold a <span className="highlight">BSc in Business Administration and Management</span>, and a <span className="highlight">MSc in Diplomatic Studies</span>. Diverse experience developing projects, public relations, and working with C-Suite executives and high-ranking officials. <span className="highlight">Led teams</span> of 5-10 people and <span className="highlight">managed projects</span> funded by the US Department of State, NATO and Dutch Ministry of Foreign Affairs. I lived in quite a few places and had to adapt fast to new environments. The instincts that this experience has created are keeping me curious about things. <span className="highlight">My goal is to get better at programming everyday</span>.
         </Typography>
       </Grid>
+
+      {/* <Button className={classes.btns} variant="outlined" color="primary" ><RouterLink id='linkCv' to='../DanielTraciResume.pdf' target="_blank" download><b>Download CV</b></RouterLink></Button> */}
+
+      <Box display="flex" justifyContent="center">
+        <Button className={classes.btns} variant="outlined" color="primary" target="_blank" href="../DanielTraciResume.pdf" download>Download my resume</Button>
+      </Box>
 
       {/* Projects---------------------
           --------------------------------------------------*/}

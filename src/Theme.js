@@ -1,4 +1,5 @@
 import { createMuiTheme } from '@material-ui/core/styles';
+const font =  "'Roboto', sans-serif";
 
 const theme = createMuiTheme({
   overrides: {
@@ -30,8 +31,9 @@ const theme = createMuiTheme({
   },
 
   typography: {
+    fontFamily: font,
     h3: {
-      fontSize: '1.9rem',
+      fontSize: '1.6rem',
       '@media (min-width:600px)': {
         fontSize: '3.7rem',
       },
