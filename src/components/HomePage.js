@@ -334,7 +334,7 @@ export default function HomePage(props) {
             Used technologies
           </Typography>
           <Typography variant="body1" align="center" >
-            MongoDB, Express, React, Node, Google Material UI, CSS3, HTML5
+            MongoDB, Express, React, Node, Nodemailer, Google Material UI, CSS3, HTML5
           </Typography>
           <Grid container
             direction="row"
